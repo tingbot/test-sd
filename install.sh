@@ -21,7 +21,6 @@ mkdir Guzunty
     git clone https://github.com/Guzunty/Pi.git
     cd Pi/src/
     cd gz_load
-    nano Makefile 
     # remove problematic '-Wl' compilation flag
     sed -i -e 's: -Wl : :g' Makefile
     make
