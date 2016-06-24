@@ -1,0 +1,13 @@
+#!/bin/sh
+
+cd "$(dirname "$0")"
+
+if [ ! -e /dev/fb1 ]; then
+    # screen isn't present, try flashing the Guzunty
+    sudo gz_load /home/pi/Guzunty/Pi/src/gz_lcd/gz_lcd.xsvf
+else
+    # screen is present, run the test program
+    sudo python test_routine.tingapp/main.py
+fi
+
+sudo shutdown -r now
