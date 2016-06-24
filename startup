@@ -8,6 +8,9 @@ cd "$(dirname "$(realpath "$0")")"
 TEST_FLAG=/home/pi/TEST_MODE
 
 if [ ! -f $TEST_FLAG ]; then
+    # sleep to let system fully boot
+    sleep 30
+
     # first boot, try flashing the Xilinx
     sudo gz_load /home/pi/Guzunty/Pi/src/gz_lcd/gz_lcd.xsvf
     # make the test flag so we restart in test mode
