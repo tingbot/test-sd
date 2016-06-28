@@ -31,5 +31,8 @@ mkdir Guzunty
     sudo make install
 )
 
+# update tingbot-python to get backlight support
+sudo pip install tingbot-python==0.5.0
+
 sudo raspi-config --expand-rootfs
 sudo shutdown -r now
