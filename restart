@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# sleep for 2 mins, then restart
-sleep 120
-sudo shutdown -r now
